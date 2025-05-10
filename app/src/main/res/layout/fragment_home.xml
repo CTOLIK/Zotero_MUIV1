@@ -6,17 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <EditText
+        android:id="@+id/LoginText"
+        android:layout_width="206dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="72dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/Autoriz_Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/PassText"
+        android:layout_width="207dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="36dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/Autoriz_Pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginText" />
+
+    <Button
+        android:id="@+id/button_SignIn"
+        android:layout_width="179dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/Autoriz_SignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PassText" />
+
+    <Button
+        android:id="@+id/button_SignUp"
+        android:layout_width="179dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/Autoriz_SignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_SignIn" />
+
     <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:id="@+id/textView3"
+        android:layout_width="351dp"
+        android:layout_height="208dp"
+        android:text="@string/app_name"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button_SignUp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
