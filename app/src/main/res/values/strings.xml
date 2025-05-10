@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_name">MyApp</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
@@ -10,4 +8,13 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    // New strings
+
+    <string name="Autoriz_Login">User ID:</string>
+    <string name="Autoriz_Pass">Ключ API:</string>
+    <string name="Autoriz_SignIn">Войти</string>
+    <string name="Autoriz_SignUp">Регистрация</string>
+    <!-- Strings related to login -->
+
 </resources>

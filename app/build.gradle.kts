@@ -16,6 +16,15 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    configurations {
+        create("cleanedAnnotations")
+        implementation {
+            exclude(group = "org.jetbrains", module = "annotations")
+        }
+    }
+
+    useLibrary("org.apache.http.legacy")
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -26,8 +35,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         viewBinding = true
@@ -43,7 +52,29 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.firebase.crashlytics.buildtools)
+    implementation(libs.strict.version.matcher.plugin)
+    implementation(libs.annotation)
+    implementation(libs.legacy.support.v4)
+    implementation(libs.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // New rows
+
+    //implementation (libs.retrofit)
+    implementation (libs.okhttp3.okhttp)
+    implementation (libs.converter.gson)
+
+
+    // libzotero
+    implementation (libs.squareup.retrofit)
+    implementation (libs.rxjava.core)
+    implementation (libs.annotations)
+    implementation (libs.okhttp)
+    implementation (libs.okhttp.urlconnection)
+
+    // testImplementation (libs.junit.v411)
+    testImplementation (libs.assertj.core)
 }
