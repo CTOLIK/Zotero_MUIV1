@@ -4,12 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.myapplication.R;
 import com.example.myapplication.databinding.FragmentGalleryBinding;
 
 public class GalleryFragment extends Fragment {
@@ -24,10 +27,26 @@ public class GalleryFragment extends Fragment {
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        String[] aaaaa = new String[] {"Blyat","Ceka"};
+////                        ListView lv_myLib = findViewById(R.id.listView);
+//        ListView lv_myLib = (ListView)view.findViewById(R.id.MyLib);
+////
+////
+//         //      ar_Items.toArray(aaaaa);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+//                android.R.layout.simple_list_item_1, aaaaa);
+//
+//
+//        lv_myLib.setAdapter(adapter);
+
+
         return root;
     }
+
+//    @Override
+//    public void onCreate(){
+//
+//    }
 
     @Override
     public void onDestroyView() {
